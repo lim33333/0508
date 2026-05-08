@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 분석 포트폴리오 | 인플루언서 분석</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: rgba(30, 41, 59, 0.7);
+            --primary-color: #3b82f6;
+            --accent-color: #8b5cf6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .card {
+            background: var(--surface-color);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card:nth-child(2) { animation-delay: 0.1s; }
+        .card:nth-child(3) { animation-delay: 0.2s; }
+        .card:nth-child(4) { animation-delay: 0.3s; }
+        .card:nth-child(5) { animation-delay: 0.4s; }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #e2e8f0;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.5rem;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        li strong {
+            color: #cbd5e1;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: #93c5fd;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .highlight {
+            background: rgba(139, 92, 246, 0.1);
+            color: #d8b4fe;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            padding-bottom: 2rem;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .insight-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 1.5rem;
+            color: #e2e8f0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>인스타 최강 인플루언서는 누구인가?</h1>
+            <p class="subtitle">데이터로 파헤쳐 본 마케팅 효율성의 비밀</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>1. 프로젝트 개요</h2>
+                <p style="color: var(--text-muted);">
+                    인스타그램 인플루언서 데이터를 활용해 <span class="highlight">팔로워 수, 평균 좋아요, 참여율, 영향력 점수</span>를 비교하고, 
+                    브랜드 마케팅 관점에서 진정으로 주목해야 할 계정이 누구인지 객관적인 데이터로 분석했습니다.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>2. 분석 질문</h2>
+                <ol>
+                    <li>팔로워 수가 많으면 평균 좋아요도 많을까?</li>
+                    <li>팔로워 수가 많으면 영향력 점수도 높을까?</li>
+                    <li>팔로워 대비 실제 반응이 높은 계정은 누구인가?</li>
+                    <li>최강 인플루언서는 어떤 기준으로 정의해야 할까?</li>
+                </ol>
+            </section>
+
+            <section class="card">
+                <h2>3. 데이터 및 전처리 과정</h2>
+                <ul>
+                    <li><strong>데이터:</strong> Top Instagram Influencers (200 rows)</li>
+                    <li><strong>주요 컬럼:</strong> rank, channel_info, influence_score, followers, avg_likes, 60_day_eng_rate</li>
+                    <li><strong>전처리:</strong>
+                        <ul>
+                            <li>country 결측치 None 대체</li>
+                            <li>k, m, b 단위 문자열을 수치형 데이터로 변환</li>
+                            <li>% 문자열 소수형 변환 및 engagement_rate 파생변수 생성</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>4. 주요 인사이트</h2>
+                <ol>
+                    <li>팔로워 수가 압도적으로 많아도 평균 좋아요가 낮은 계정이 다수 존재했습니다.</li>
+                    <li>팔로워 수와 영향력 점수는 약한 양의 관계가 있지만 단독 기준으로는 부족했습니다.</li>
+                    <li><span class="highlight">참여율(Engagement Rate)</span> 기준 상위 계정은 팔로워 수 기준 상위 계정과 전혀 다른 양상을 보였습니다.</li>
+                </ol>
+                <div class="insight-box">
+                    💡 <strong>결론:</strong> 마케팅 목적에 따라 '팔로워 수'라는 표면적 지표보다, 실제 유저의 '참여율'을 기반으로 한 의사결정이 필요함을 확인했습니다.
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>5. 사용 기술 (Tech Stack)</h2>
+                <div class="badge-container">
+                    <span class="badge">Python</span>
+                    <span class="badge">Pandas</span>
+                    <span class="badge">Matplotlib</span>
+                    <span class="badge">Seaborn</span>
+                    <span class="badge">GitHub</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Data Analysis Portfolio &copy; 2026. Hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+</html>
