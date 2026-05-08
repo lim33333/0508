@@ -265,9 +265,9 @@
         <main>
             <!-- 1. 분석 개요 -->
             <section class="card">
-                <h2>1. 프로젝트 인사이트</h2>
+                <h2>프로젝트 인사이트</h2>
                 <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                    인스타그램 Top 200 인플루언서 데이터를 분석한 결과, 가장 중요한 인사이트는 <span class="highlight-text">팔로워 수가 많다고 해서 실제 유저 참여(좋아요, 댓글 등)가 비례해서 높지는 않다는 점</span>이었습니다. 브랜드 마케팅 관점에서 진정으로 주목해야 할 계정은 '참여율(Engagement Rate)'이 높은 계정이었습니다.
+                    인스타그램 Top 200 인플루언서 데이터를 분석한 결과, 가장 중요한 인사이트는 <span class="highlight-text">팔로워 수가 많다고 해서 실제 유저 참여(좋아요, 댓글 등)가 비례해서 높지는 않다는 점</span>이었습니다. 브랜드 마케팅 관점에서 진정으로 주목해야 할 계정은 겉으로 보이는 '팔로워 수'가 아니라, 팬들과 적극적으로 소통하며 반응을 이끌어내는 '참여율(Engagement Rate)'이 높은 계정이었습니다. 따라서 마케팅 예산을 집행할 때 단순 규모보다는 <strong>진성 타겟의 반응도</strong>를 우선 지표로 삼아야 합니다.
                 </p>
             </section>
 
@@ -369,12 +369,12 @@
             type: 'scatter',
             data: {
                 datasets: [{
-                    label: 'Top 20 인플루언서 (Followers vs Likes)',
+                    label: 'Top 인플루언서 (Followers vs Likes)',
                     data: [
-                        {x: 589, y: 7.4}, {x: 468, y: 5.2}, {x: 421, y: 6.1}, 
-                        {x: 390, y: 2.1}, {x: 380, y: 3.5}, {x: 350, y: 1.2},
-                        {x: 250, y: 8.5}, {x: 200, y: 11.2}, {x: 180, y: 4.3},
-                        {x: 100, y: 15.1}, {x: 80, y: 12.3}, {x: 60, y: 14.5} // 가상 샘플 데이터
+                        {x: 589, y: 7.4, name: 'Cristiano'}, {x: 468, y: 5.2, name: 'Leo Messi'}, {x: 421, y: 6.1, name: 'Selena Gomez'}, 
+                        {x: 390, y: 2.1, name: 'Kylie Jenner'}, {x: 380, y: 3.5, name: 'The Rock'}, {x: 350, y: 1.2, name: 'Ariana Grande'},
+                        {x: 250, y: 8.5, name: 'Kim Kardashian'}, {x: 200, y: 11.2, name: 'Beyonce'}, {x: 180, y: 4.3, name: 'Khloe'},
+                        {x: 100, y: 15.1, name: 'Justin Bieber'}, {x: 80, y: 12.3, name: 'Kendall Jenner'}, {x: 60, y: 14.5, name: 'Taylor Swift'}
                     ],
                     backgroundColor: 'rgba(59, 130, 246, 0.7)',
                     borderColor: '#3b82f6',
@@ -390,7 +390,7 @@
                     tooltip: {
                         callbacks: {
                             label: function(ctx) {
-                                return `팔로워: ${ctx.raw.x}M명, 좋아요: ${ctx.raw.y}M개`;
+                                return `[${ctx.raw.name}] 팔로워: ${ctx.raw.x}M명, 좋아요: ${ctx.raw.y}M개`;
                             }
                         }
                     }
