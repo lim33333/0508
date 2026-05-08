@@ -129,6 +129,7 @@
         .card:nth-child(2) { animation-delay: 0.1s; }
         .card:nth-child(3) { animation-delay: 0.2s; }
         .card:nth-child(4) { animation-delay: 0.3s; }
+        .card:nth-child(5) { animation-delay: 0.4s; }
 
         h2 {
             font-size: 1.5rem;
@@ -271,10 +272,10 @@
                 </p>
             </section>
 
-            <!-- 2. 인터랙티브 그래프 -->
+            <!-- 2. 인터랙티브 그래프 (Overview) -->
             <section class="card">
-                <h2>📊 핵심 데이터 시각화 (Interactive Chart)</h2>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">마우스를 그래프 위에 올려서 상세 수치를 확인해보세요!</p>
+                <h2>📊 핵심 데이터 시각화 (Overview)</h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">마우스를 그래프 위에 올려서 상세 수치와 인물 이름을 확인해보세요!</p>
                 
                 <div class="chart-wrapper" style="height: 350px;">
                     <canvas id="followersVsLikesChart"></canvas>
@@ -284,16 +285,33 @@
                     <div class="chart-wrapper" style="height: 300px;">
                         <canvas id="topFollowersChart"></canvas>
                     </div>
+                    <!-- 결측치가 많던 국가 차트 대신 영향력 랭킹 가로 막대 차트 -->
                     <div class="chart-wrapper" style="height: 300px;">
-                        <canvas id="countryChart"></canvas>
+                        <canvas id="influenceScoreChart"></canvas>
                     </div>
                 </div>
             </section>
 
-            <!-- 3. CSS 애니메이션 진행률 바 -->
+            <!-- 3. 다차원 심층 분석 (Advanced Analytics) -->
+            <section class="card">
+                <h2>🔍 다차원 심층 분석 (Advanced Analytics)</h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">단순 수치 비교를 넘어, 3차원 버블 차트와 육각형 밸런스를 통해 입체적으로 분석합니다.</p>
+                
+                <!-- 버블 차트 -->
+                <div class="chart-wrapper" style="height: 350px;">
+                    <canvas id="bubbleChart"></canvas>
+                </div>
+                
+                <!-- 방사형 차트 -->
+                <div class="chart-wrapper" style="height: 400px; margin-top: 1.5rem; background: rgba(0,0,0,0.1);">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </section>
+
+            <!-- 4. CSS 애니메이션 진행률 바 -->
             <section class="card">
                 <h2>🔥 참여율(Engagement Rate) TOP 3 랭킹</h2>
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">팔로워 대비 실제 반응이 가장 뜨거운 숨겨진 강자들입니다.</p>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">팔로워 대비 실제 반응이 가장 뜨거운 '숨겨진 강자들'입니다.</p>
                 
                 <div class="progress-container">
                     <div class="progress-item">
@@ -326,7 +344,7 @@
                 </div>
             </section>
 
-            <!-- 4. 댓글 섹션 (이전에 추가한 Giscus 유지) -->
+            <!-- 5. 댓글 섹션 (Giscus) -->
             <section class="card">
                 <h2>💬 댓글 및 의견 남기기</h2>
                 <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">
@@ -424,27 +442,104 @@
             }
         });
 
-        // 3. 도넛 차트: 국가별 비율
-        const ctx3 = document.getElementById('countryChart').getContext('2d');
+        // 3. 가로 막대 차트: 영향력 점수 랭킹
+        const ctx3 = document.getElementById('influenceScoreChart').getContext('2d');
         new Chart(ctx3, {
-            type: 'doughnut',
+            type: 'bar',
             data: {
-                labels: ['USA', 'India', 'Brazil', 'UK', '기타'],
+                labels: ['Cristiano', 'Justin Bieber', 'Taylor Swift', 'Selena', 'Kylie'],
                 datasets: [{
-                    data: [45, 15, 10, 5, 25],
-                    backgroundColor: [
-                        '#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#64748b'
+                    label: '영향력 점수 (Influence Score)',
+                    data: [93, 91, 89, 87, 85],
+                    backgroundColor: 'rgba(16, 185, 129, 0.6)',
+                    borderColor: '#10b981',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y', // 가로 막대
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { title: { display: true, text: '점수' }, max: 100 }
+                }
+            }
+        });
+
+        // 4. 버블 차트: 팔로워 vs 참여율 vs 영향력
+        const ctx4 = document.getElementById('bubbleChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: '인플루언서 효율성 (버블 크기 = 영향력)',
+                    data: [
+                        {x: 589, y: 1.2, r: 25, name: 'Cristiano'},
+                        {x: 421, y: 1.5, r: 20, name: 'Selena Gomez'},
+                        {x: 100, y: 15.1, r: 18, name: 'Justin Bieber'},
+                        {x: 80, y: 12.3, r: 15, name: 'Kendall Jenner'},
+                        {x: 60, y: 25.4, r: 35, name: 'Taehyung (V)'},
+                        {x: 45, y: 21.1, r: 30, name: 'Jimin'}
                     ],
-                    borderWidth: 0,
-                    hoverOffset: 10
+                    backgroundColor: 'rgba(245, 158, 11, 0.6)',
+                    borderColor: '#f59e0b'
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                cutout: '70%',
                 plugins: {
-                    legend: { position: 'right' }
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                const d = ctx.raw;
+                                return `[${d.name}] 팔로워: ${d.x}M, 참여율: ${d.y}%, 영향력: ${d.r * 3}점`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { title: { display: true, text: '팔로워 수 (Millions)' } },
+                    y: { title: { display: true, text: '참여율 (%)' } }
+                }
+            }
+        });
+
+        // 5. 방사형 차트 (Radar): 특화 영역 밸런스 비교
+        const ctx5 = document.getElementById('radarChart').getContext('2d');
+        new Chart(ctx5, {
+            type: 'radar',
+            data: {
+                labels: ['팔로워 규모', '대중 인지도', '팬덤 소통(참여율)', '평균 좋아요 수', '종합 영향력'],
+                datasets: [
+                    {
+                        label: 'Cristiano (매스 마케팅 특화)',
+                        data: [100, 95, 20, 60, 93],
+                        backgroundColor: 'rgba(59, 130, 246, 0.3)',
+                        borderColor: '#3b82f6',
+                        pointBackgroundColor: '#3b82f6'
+                    },
+                    {
+                        label: 'Taehyung (진성 팬덤 특화)',
+                        data: [30, 80, 100, 90, 88],
+                        backgroundColor: 'rgba(139, 92, 246, 0.3)',
+                        borderColor: '#8b5cf6',
+                        pointBackgroundColor: '#8b5cf6'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        pointLabels: { color: '#e2e8f0', font: { size: 12 } },
+                        ticks: { display: false, max: 100, min: 0 }
+                    }
                 }
             }
         });
