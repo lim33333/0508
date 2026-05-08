@@ -1,0 +1,1756 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='insta_influencers_tableau_ready' inline='true' name='federated.0nelyem1pk296r153n5cp0izrqy5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='insta_influencers_tableau_ready' name='textscan.0scxryu1u5b1ho11xlj7q1s9ejpb'>
+            <connection class='textscan' directory='C:/Users/302-11/Downloads' filename='insta_influencers_tableau_ready.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0scxryu1u5b1ho11xlj7q1s9ejpb' name='insta_influencers_tableau_ready.csv' table='[insta_influencers_tableau_ready#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+            <column datatype='integer' name='rank' ordinal='0' />
+            <column datatype='string' name='channel_info' ordinal='1' />
+            <column datatype='string' name='country' ordinal='2' />
+            <column datatype='string' name='rank_group' ordinal='3' />
+            <column datatype='string' name='follower_band' ordinal='4' />
+            <column datatype='string' name='engagement_band' ordinal='5' />
+            <column datatype='string' name='insight_segment' ordinal='6' />
+            <column datatype='integer' name='influence_score' ordinal='7' />
+            <column datatype='real' name='balanced_influencer_score' ordinal='8' />
+            <column datatype='real' name='posts' ordinal='9' />
+            <column datatype='real' name='followers' ordinal='10' />
+            <column datatype='real' name='followers_m' ordinal='11' />
+            <column datatype='real' name='avg_likes' ordinal='12' />
+            <column datatype='real' name='avg_likes_m' ordinal='13' />
+            <column datatype='real' name='new_post_avg_like' ordinal='14' />
+            <column datatype='real' name='new_post_avg_like_m' ordinal='15' />
+            <column datatype='real' name='total_likes' ordinal='16' />
+            <column datatype='real' name='total_likes_b' ordinal='17' />
+            <column datatype='real' name='recent_60_day_eng_rate' ordinal='18' />
+            <column datatype='real' name='recent_60_day_eng_rate_pct' ordinal='19' />
+            <column datatype='real' name='engagement_rate' ordinal='20' />
+            <column datatype='real' name='engagement_rate_pct' ordinal='21' />
+            <column datatype='boolean' name='recent_eng_rate_missing' ordinal='22' />
+            <column datatype='real' name='followers_score_0_100' ordinal='23' />
+            <column datatype='real' name='engagement_score_0_100' ordinal='24' />
+            <column datatype='real' name='recent_eng_score_0_100' ordinal='25' />
+            <column datatype='real' name='influence_score_0_100' ordinal='26' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ko&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₩&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ko_KR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>rank</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>channel_info</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[channel_info]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>channel_info</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank_group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rank_group]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>rank_group</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>follower_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[follower_band]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>follower_band</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>engagement_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[engagement_band]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>engagement_band</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>insight_segment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[insight_segment]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>insight_segment</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>influence_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[influence_score]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>influence_score</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>balanced_influencer_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[balanced_influencer_score]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>balanced_influencer_score</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>posts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[posts]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>posts</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>followers</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[followers]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>followers</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>followers_m</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[followers_m]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>followers_m</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_likes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_likes]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>avg_likes</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_likes_m</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_likes_m]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>avg_likes_m</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_post_avg_like</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_post_avg_like]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>new_post_avg_like</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_post_avg_like_m</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_post_avg_like_m]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>new_post_avg_like_m</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_likes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_likes]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>total_likes</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_likes_b</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_likes_b]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>total_likes_b</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recent_60_day_eng_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[recent_60_day_eng_rate]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>recent_60_day_eng_rate</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recent_60_day_eng_rate_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[recent_60_day_eng_rate_pct]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>recent_60_day_eng_rate_pct</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>engagement_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[engagement_rate]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>engagement_rate</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>engagement_rate_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[engagement_rate_pct]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>engagement_rate_pct</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recent_eng_rate_missing</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[recent_eng_rate_missing]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>recent_eng_rate_missing</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>followers_score_0_100</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[followers_score_0_100]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>followers_score_0_100</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>engagement_score_0_100</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[engagement_score_0_100]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>engagement_score_0_100</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recent_eng_score_0_100</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[recent_eng_score_0_100]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>recent_eng_score_0_100</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>influence_score_0_100</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[influence_score_0_100]</local-name>
+            <parent-name>[insta_influencers_tableau_ready.csv]</parent-name>
+            <remote-alias>influence_score_0_100</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='insta_influencers_tableau_ready.csv' datatype='table' name='[__tableau_internal_object_id__].[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]' role='measure' type='quantitative' />
+      <column caption='Avg Likes' datatype='real' name='[avg_likes]' role='measure' type='quantitative' />
+      <column caption='Avg Likes M' datatype='real' name='[avg_likes_m]' role='measure' type='quantitative' />
+      <column caption='Balanced Influencer Score' datatype='real' name='[balanced_influencer_score]' role='measure' type='quantitative' />
+      <column caption='Channel Info' datatype='string' name='[channel_info]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Engagement Band' datatype='string' name='[engagement_band]' role='dimension' type='nominal' />
+      <column caption='Engagement Rate' datatype='real' name='[engagement_rate]' role='measure' type='quantitative' />
+      <column caption='Engagement Rate Pct' datatype='real' name='[engagement_rate_pct]' role='measure' type='quantitative' />
+      <column caption='Engagement Score 0 100' datatype='real' name='[engagement_score_0_100]' role='measure' type='quantitative' />
+      <column caption='Follower Band' datatype='string' name='[follower_band]' role='dimension' type='nominal' />
+      <column caption='Followers' datatype='real' name='[followers]' role='measure' type='quantitative' />
+      <column caption='Followers M' datatype='real' name='[followers_m]' role='measure' type='quantitative' />
+      <column caption='Followers Score 0 100' datatype='real' name='[followers_score_0_100]' role='measure' type='quantitative' />
+      <column caption='Influence Score' datatype='integer' name='[influence_score]' role='measure' type='quantitative' />
+      <column caption='Influence Score 0 100' datatype='real' name='[influence_score_0_100]' role='measure' type='quantitative' />
+      <column caption='Insight Segment' datatype='string' name='[insight_segment]' role='dimension' type='nominal' />
+      <column caption='New Post Avg Like' datatype='real' name='[new_post_avg_like]' role='measure' type='quantitative' />
+      <column caption='New Post Avg Like M' datatype='real' name='[new_post_avg_like_m]' role='measure' type='quantitative' />
+      <column caption='Posts' datatype='real' name='[posts]' role='measure' type='quantitative' />
+      <column caption='Rank' datatype='integer' name='[rank]' role='measure' type='quantitative' />
+      <column caption='Rank Group' datatype='string' name='[rank_group]' role='dimension' type='nominal' />
+      <column caption='Recent 60 Day Eng Rate' datatype='real' name='[recent_60_day_eng_rate]' role='measure' type='quantitative' />
+      <column caption='Recent 60 Day Eng Rate Pct' datatype='real' name='[recent_60_day_eng_rate_pct]' role='measure' type='quantitative' />
+      <column caption='Recent Eng Rate Missing' datatype='boolean' name='[recent_eng_rate_missing]' role='dimension' type='nominal' />
+      <column caption='Recent Eng Score 0 100' datatype='real' name='[recent_eng_score_0_100]' role='measure' type='quantitative' />
+      <column caption='Total Likes' datatype='real' name='[total_likes]' role='measure' type='quantitative' />
+      <column caption='Total Likes B' datatype='real' name='[total_likes_b]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='ko_KR' class='hyper' dbname='C:/Users/302-11/AppData/Local/Temp/TableauTemp/#TableauTemp_0j3nqp000fw2jj1eyud7r05nm46t.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/06/2026 03:53:55 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rank]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rank</remote-alias>
+              <ordinal>0</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>channel_info</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[channel_info]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>channel_info</remote-alias>
+              <ordinal>1</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>2</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rank_group</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rank_group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rank_group</remote-alias>
+              <ordinal>3</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>follower_band</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[follower_band]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>follower_band</remote-alias>
+              <ordinal>4</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>engagement_band</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[engagement_band]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>engagement_band</remote-alias>
+              <ordinal>5</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>insight_segment</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[insight_segment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>insight_segment</remote-alias>
+              <ordinal>6</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LKO_RKR' />
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>influence_score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[influence_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>influence_score</remote-alias>
+              <ordinal>7</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>balanced_influencer_score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[balanced_influencer_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>balanced_influencer_score</remote-alias>
+              <ordinal>8</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>posts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[posts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>posts</remote-alias>
+              <ordinal>9</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>99</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>followers</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[followers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>followers</remote-alias>
+              <ordinal>10</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>165</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>followers_m</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[followers_m]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>followers_m</remote-alias>
+              <ordinal>11</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>165</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_likes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_likes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_likes</remote-alias>
+              <ordinal>12</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>135</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_likes_m</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_likes_m]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_likes_m</remote-alias>
+              <ordinal>13</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>135</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>new_post_avg_like</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[new_post_avg_like]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>new_post_avg_like</remote-alias>
+              <ordinal>14</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>162</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>new_post_avg_like_m</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[new_post_avg_like_m]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>new_post_avg_like_m</remote-alias>
+              <ordinal>15</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>162</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_likes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_likes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_likes</remote-alias>
+              <ordinal>16</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>116</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_likes_b</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_likes_b]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_likes_b</remote-alias>
+              <ordinal>17</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>116</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>recent_60_day_eng_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[recent_60_day_eng_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>recent_60_day_eng_rate</remote-alias>
+              <ordinal>18</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>147</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>recent_60_day_eng_rate_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[recent_60_day_eng_rate_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>recent_60_day_eng_rate_pct</remote-alias>
+              <ordinal>19</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>147</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>engagement_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[engagement_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>engagement_rate</remote-alias>
+              <ordinal>20</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>engagement_rate_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[engagement_rate_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>engagement_rate_pct</remote-alias>
+              <ordinal>21</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>recent_eng_rate_missing</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[recent_eng_rate_missing]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>recent_eng_rate_missing</remote-alias>
+              <ordinal>22</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>followers_score_0_100</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[followers_score_0_100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>followers_score_0_100</remote-alias>
+              <ordinal>23</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>165</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>engagement_score_0_100</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[engagement_score_0_100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>engagement_score_0_100</remote-alias>
+              <ordinal>24</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>recent_eng_score_0_100</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[recent_eng_score_0_100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>recent_eng_score_0_100</remote-alias>
+              <ordinal>25</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>147</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>influence_score_0_100</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[influence_score_0_100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>influence_score_0_100</remote-alias>
+              <ordinal>26</ordinal>
+              <family>insta_influencers_tableau_ready.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='insta_influencers_tableau_ready.csv' id='insta_influencers_tableau_ready.csv_7415553C7AAB495D952D186831349CDF'>
+            <properties context=''>
+              <relation connection='textscan.0scxryu1u5b1ho11xlj7q1s9ejpb' name='insta_influencers_tableau_ready.csv' table='[insta_influencers_tableau_ready#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+                  <column datatype='integer' name='rank' ordinal='0' />
+                  <column datatype='string' name='channel_info' ordinal='1' />
+                  <column datatype='string' name='country' ordinal='2' />
+                  <column datatype='string' name='rank_group' ordinal='3' />
+                  <column datatype='string' name='follower_band' ordinal='4' />
+                  <column datatype='string' name='engagement_band' ordinal='5' />
+                  <column datatype='string' name='insight_segment' ordinal='6' />
+                  <column datatype='integer' name='influence_score' ordinal='7' />
+                  <column datatype='real' name='balanced_influencer_score' ordinal='8' />
+                  <column datatype='real' name='posts' ordinal='9' />
+                  <column datatype='real' name='followers' ordinal='10' />
+                  <column datatype='real' name='followers_m' ordinal='11' />
+                  <column datatype='real' name='avg_likes' ordinal='12' />
+                  <column datatype='real' name='avg_likes_m' ordinal='13' />
+                  <column datatype='real' name='new_post_avg_like' ordinal='14' />
+                  <column datatype='real' name='new_post_avg_like_m' ordinal='15' />
+                  <column datatype='real' name='total_likes' ordinal='16' />
+                  <column datatype='real' name='total_likes_b' ordinal='17' />
+                  <column datatype='real' name='recent_60_day_eng_rate' ordinal='18' />
+                  <column datatype='real' name='recent_60_day_eng_rate_pct' ordinal='19' />
+                  <column datatype='real' name='engagement_rate' ordinal='20' />
+                  <column datatype='real' name='engagement_rate_pct' ordinal='21' />
+                  <column datatype='boolean' name='recent_eng_rate_missing' ordinal='22' />
+                  <column datatype='real' name='followers_score_0_100' ordinal='23' />
+                  <column datatype='real' name='engagement_score_0_100' ordinal='24' />
+                  <column datatype='real' name='recent_eng_score_0_100' ordinal='25' />
+                  <column datatype='real' name='influence_score_0_100' ordinal='26' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='KPI_1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='맑은 고딕'>전체 인플루언서 수</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='insta_influencers_tableau_ready' name='federated.0nelyem1pk296r153n5cp0izrqy5' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0nelyem1pk296r153n5cp0izrqy5'>
+            <column caption='Channel Info' datatype='string' name='[channel_info]' role='dimension' type='nominal' />
+            <column-instance column='[channel_info]' derivation='CountD' name='[ctd:channel_info:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='71' />
+            <format attr='width' value='168' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='24' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0nelyem1pk296r153n5cp0izrqy5].[ctd:channel_info:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0DEB289E-D8B2-4E9F-A66A-E1851847AB17}' />
+    </worksheet>
+    <worksheet name='KPI_2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='맑은 고딕'>평균 영향력 점수</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='insta_influencers_tableau_ready' name='federated.0nelyem1pk296r153n5cp0izrqy5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0nelyem1pk296r153n5cp0izrqy5'>
+            <column-instance column='[influence_score]' derivation='Avg' name='[avg:influence_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Influence Score' datatype='integer' name='[influence_score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='156' />
+            <format attr='height' value='82' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='24' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0nelyem1pk296r153n5cp0izrqy5].[avg:influence_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BB103B96-EE24-4551-B8A8-0A4FDE2A18FB}' />
+    </worksheet>
+    <worksheet name='KPI_3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='맑은 고딕'>최대 팔로워 수</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='insta_influencers_tableau_ready' name='federated.0nelyem1pk296r153n5cp0izrqy5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0nelyem1pk296r153n5cp0izrqy5'>
+            <column caption='Followers' datatype='real' name='[followers]' role='measure' type='quantitative' />
+            <column-instance column='[followers]' derivation='Max' name='[max:followers:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='68' />
+            <format attr='width' value='138' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='16' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0nelyem1pk296r153n5cp0izrqy5].[max:followers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B064464B-3A2C-4D69-9A20-7CAED45A7C91}' />
+    </worksheet>
+    <worksheet name='KPI_4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='맑은 고딕'>평균 참여율</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='insta_influencers_tableau_ready' name='federated.0nelyem1pk296r153n5cp0izrqy5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0nelyem1pk296r153n5cp0izrqy5'>
+            <column caption='Engagement Rate Pct' datatype='real' name='[engagement_rate_pct]' role='measure' type='quantitative' />
+            <column-instance column='[engagement_rate_pct]' derivation='Sum' name='[sum:engagement_rate_pct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='65' />
+            <format attr='width' value='120' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='24' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0nelyem1pk296r153n5cp0izrqy5].[sum:engagement_rate_pct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C9D7DA88-3475-4375-9A46-51EDAEB59F74}' />
+    </worksheet>
+    <worksheet name='팔로워_vs_평균좋아요'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='맑은 고딕'>팔로워 vs 평균좋아요</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='insta_influencers_tableau_ready' name='federated.0nelyem1pk296r153n5cp0izrqy5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0nelyem1pk296r153n5cp0izrqy5'>
+            <column-instance column='[insight_segment]' derivation='Attribute' name='[attr:insight_segment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[avg_likes_m]' derivation='Avg' name='[avg:avg_likes_m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[followers_m]' derivation='Avg' name='[avg:followers_m:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Likes M' datatype='real' name='[avg_likes_m]' role='measure' type='quantitative' />
+            <column caption='Channel Info' datatype='string' name='[channel_info]' role='dimension' type='nominal' />
+            <column caption='Engagement Rate Pct' datatype='real' name='[engagement_rate_pct]' role='measure' type='quantitative' />
+            <column caption='Followers M' datatype='real' name='[followers_m]' role='measure' type='quantitative' />
+            <column caption='Influence Score' datatype='integer' name='[influence_score]' role='measure' type='quantitative' />
+            <column caption='Insight Segment' datatype='string' name='[insight_segment]' role='dimension' type='nominal' />
+            <column-instance column='[channel_info]' derivation='None' name='[none:channel_info:nk]' pivot='key' type='nominal' />
+            <column-instance column='[insight_segment]' derivation='None' name='[none:insight_segment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[avg_likes_m]' derivation='Sum' name='[sum:avg_likes_m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[engagement_rate_pct]' derivation='Sum' name='[sum:engagement_rate_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[followers_m]' derivation='Sum' name='[sum:followers_m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[influence_score]' derivation='Sum' name='[sum:influence_score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0nelyem1pk296r153n5cp0izrqy5].[none:insight_segment:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:insight_segment:nk]' member='&quot;일반 계정&quot;' />
+              <groupfilter function='member' level='[none:insight_segment:nk]' member='&quot;참여율 상위 10\%&quot;' />
+              <groupfilter function='member' level='[none:insight_segment:nk]' member='&quot;팔로워 많음·평균 좋아요 낮음&quot;' />
+              <groupfilter function='member' level='[none:insight_segment:nk]' member='&quot;팔로워 중위 이하·영향력 점수 높음&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0nelyem1pk296r153n5cp0izrqy5].[none:insight_segment:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.0nelyem1pk296r153n5cp0izrqy5].[none:insight_segment:nk]' />
+              <size column='[federated.0nelyem1pk296r153n5cp0izrqy5].[sum:influence_score:qk]' />
+              <lod column='[federated.0nelyem1pk296r153n5cp0izrqy5].[none:channel_info:nk]' />
+              <tooltip column='[federated.0nelyem1pk296r153n5cp0izrqy5].[attr:insight_segment:nk]' />
+              <tooltip column='[federated.0nelyem1pk296r153n5cp0izrqy5].[sum:avg_likes_m:qk]' />
+              <tooltip column='[federated.0nelyem1pk296r153n5cp0izrqy5].[sum:followers_m:qk]' />
+              <tooltip column='[federated.0nelyem1pk296r153n5cp0izrqy5].[sum:engagement_rate_pct:qk]' />
+              <tooltip column='[federated.0nelyem1pk296r153n5cp0izrqy5].[sum:influence_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0nelyem1pk296r153n5cp0izrqy5].[avg:avg_likes_m:qk]</rows>
+        <cols>[federated.0nelyem1pk296r153n5cp0izrqy5].[avg:followers_m:qk]</cols>
+      </table>
+      <simple-id uuid='{724A840A-088B-4802-9982-E8AE7BC77F57}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='KPI_1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0nelyem1pk296r153n5cp0izrqy5].[none:channel_info:nk]</field>
+            <field>[federated.0nelyem1pk296r153n5cp0izrqy5].[none:country:nk]</field>
+            <field>[federated.0nelyem1pk296r153n5cp0izrqy5].[none:insight_segment:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1196C68D-7273-4E11-B112-8FA024BD0AB4}' />
+    </window>
+    <window class='worksheet' name='KPI_2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FFC8FBB0-2250-46C0-BB18-C4BBE5F5E719}' />
+    </window>
+    <window class='worksheet' name='KPI_3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9FEC67FE-4EC1-4C3F-84CE-0EF6151C59DD}' />
+    </window>
+    <window class='worksheet' name='KPI_4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{36A83D18-8246-41C8-8FFB-6CA4A4D2D8B4}' />
+    </window>
+    <window class='worksheet' maximized='true' name='팔로워_vs_평균좋아요'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0nelyem1pk296r153n5cp0izrqy5].[none:insight_segment:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0nelyem1pk296r153n5cp0izrqy5].[none:insight_segment:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0nelyem1pk296r153n5cp0izrqy5].[sum:influence_score:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0nelyem1pk296r153n5cp0izrqy5].[none:channel_info:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AC8CBD73-6DF1-46BF-8FB1-98CCD550A3DF}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='75' name='KPI_1' width='172'>
+      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
+      d0UvIzQAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='86' name='KPI_2' width='160'>
+      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
+    </thumbnail>
+    <thumbnail height='72' name='KPI_3' width='142'>
+      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
+    </thumbnail>
+    <thumbnail height='69' name='KPI_4' width='124'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='팔로워_vs_평균좋아요' width='192'>
+      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
+      Yu5AYAZGcwAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
